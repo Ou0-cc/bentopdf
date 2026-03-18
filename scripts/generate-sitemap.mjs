@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename);
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const LOCALES_DIR = path.resolve(__dirname, '../public/locales');
 const SITE_URL = process.env.SITE_URL || 'https://www.bentopdf.com';
+const BASE_PATH = (process.env.BASE_URL || '/').replace(/\/$/, '');
 
 const languages = fs.readdirSync(LOCALES_DIR).filter((file) => {
   return fs.statSync(path.join(LOCALES_DIR, file)).isDirectory();
@@ -46,10 +47,14 @@ function getPriority(pageName) {
 
 function buildUrl(lang, pageName) {
   const pagePath = pageName === 'index' ? '' : pageName;
+  const safeSiteUrl = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
+  const safeBase = BASE_PATH.startsWith('/') || BASE_PATH === '' ? BASE_PATH : `/${BASE_PATH}`;
+  const baseUrl = `${safeSiteUrl}${safeBase}`;
+
   if (lang === 'en') {
-    return pagePath ? `${SITE_URL}/${pagePath}` : SITE_URL;
+    return pagePath ? `${baseUrl}/${pagePath}` : baseUrl;
   }
-  return pagePath ? `${SITE_URL}/${lang}/${pagePath}` : `${SITE_URL}/${lang}`;
+  return pagePath ? `${baseUrl}/${lang}/${pagePath}` : `${baseUrl}/${lang}`;
 }
 
 function generateSitemap() {

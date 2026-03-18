@@ -1,4 +1,5 @@
-import { defineConfig, Plugin } from 'vitest/config';
+import { defineConfig, loadEnv } from 'vite';
+import type { Plugin } from 'vitest/config';
 import type { IncomingMessage, ServerResponse } from 'http';
 import type { Connect } from 'vite';
 import basicSsl from '@vitejs/plugin-basic-ssl';
@@ -272,8 +273,9 @@ function rewriteHtmlPathsPlugin(): Plugin {
   };
 }
 
-export default defineConfig(() => {
-  const USE_CDN = process.env.VITE_USE_CDN === 'true';
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+  const USE_CDN = env.VITE_USE_CDN === 'true';
 
   if (USE_CDN) {
     console.log('[Vite] Using CDN for WASM files (with local fallback)');
@@ -289,7 +291,7 @@ export default defineConfig(() => {
   ];
 
   return {
-    base: (process.env.BASE_URL || '/').replace(/\/?$/, '/'),
+    base: (env.BASE_URL || '/').replace(/\/?$/, '/'),
     plugins: [
       // basicSsl(),
       handlebars({

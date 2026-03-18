@@ -15,12 +15,27 @@ import {
   createLanguageSwitcher,
   t,
 } from './i18n/index.js';
+import { init as initPlausible } from '@plausible-analytics/tracker'
+
 declare const __BRAND_NAME__: string;
 
 const init = async () => {
   await initI18n();
   injectLanguageSwitcher();
   applyTranslations();
+
+  
+  // disable if localstorage, disablePlausible is set to true
+  if (!localStorage.getItem('disablePlausible')) {
+    initPlausible({
+      domain: 'ou0.cc',
+      endpoint: 'https://plausible.canine.tools/api/event',
+      captureOnLocalhost: false,
+      outboundLinks: true
+    });
+  } else {
+    console.log('Plausible statistics disabled');
+  }
 
   pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',

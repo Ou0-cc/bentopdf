@@ -242,7 +242,13 @@ async function generateI18nPages() {
 
   for (const file of htmlFiles) {
     const filePath = path.join(DIST_DIR, file);
-    const originalContent = fs.readFileSync(filePath, 'utf-8');
+    let originalContent = fs.readFileSync(filePath, 'utf-8');
+
+    // Replace hardcoded bentopdf domains with our SITE_URL + BASE_PATH
+    const safeSiteUrl = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
+    const fullBaseUrl = `${safeSiteUrl}${BASE_PATH}`;
+    originalContent = originalContent.replace(/https:\/\/www\.bentopdf\.com/g, fullBaseUrl);
+    originalContent = originalContent.replace(/https:\/\/bentopdf\.com/g, fullBaseUrl);
 
     for (const lang of languages) {
       if (lang === 'en') continue;
