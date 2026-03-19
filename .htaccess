@@ -1,5 +1,6 @@
 RewriteEngine On
-RewriteBase /
+# ou0.ccc/bentopdf/
+RewriteBase /bentopdf
 
 # ============================================
 # 1. SECURITY HEADERS (UPDATED FOR CDN COMPATIBILITY)
@@ -84,8 +85,8 @@ Header append Vary Accept-Encoding
 # 5. REDIRECTS & ROUTING
 # ============================================
 # Canonical WWW
-RewriteCond %{HTTP_HOST} ^bentopdf\.com [NC]
-RewriteRule ^(.*)$ https://www.bentopdf.com/$1 [L,R=301]
+# RewriteCond %{HTTP_HOST} ^bentopdf\.com [NC]
+# RewriteRule ^(.*)$ https://www.bentopdf.com/$1 [L,R=301]
 
 # Force HTTPS
 RewriteCond %{HTTPS} off
@@ -106,16 +107,16 @@ RewriteRule ^ - [L]
 # 5.1. LANGUAGE ROUTES (MUST BE BEFORE .html extension rule)
 # ============================================
 # English prefix redirects to root
-RewriteRule ^en/?$ / [R=301,L]
-RewriteRule ^en/(.+)$ /$1 [R=301,L]
+RewriteRule ^en/?$ /bentopdf/ [R=301,L]
+RewriteRule ^en/(.+)$ /bentopdf/$1 [R=301,L]
 
 # Language prefix root (e.g., /de/ -> /de/index.html)
 RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
-RewriteRule ^(de|es|zh|zh-TW|vi|it|id|tr|fr|pt)/?$ /$1/index.html [L]
+RewriteRule ^(de|es|zh|zh-TW|vi|it|id|tr|fr|pt)/?$ /bentopdf/$1/index.html [L]
 
 # Language prefix with path (e.g., /de/merge-pdf -> /de/merge-pdf.html)
 RewriteCond %{DOCUMENT_ROOT}/$1/$2.html -f
-RewriteRule ^(de|es|zh|zh-TW|vi|it|id|tr|fr|pt)/([^/]+)/?$ /$1/$2.html [L]
+RewriteRule ^(de|es|zh|zh-TW|vi|it|id|tr|fr|pt)/([^/]+)/?$ /bentopdf/$1/$2.html [L]
 
 # ============================================
 # 5.5. DOCS ROUTING (VitePress)
@@ -136,4 +137,4 @@ RewriteRule ^([^/]+)$ $1.html [L]
 # ============================================
 # 7. ERROR PAGES
 # ============================================
-ErrorDocument 404 /404.html
+ErrorDocument 404 /bentopdf/404.html
