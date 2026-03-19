@@ -297,11 +297,11 @@ export default defineConfig(({ mode }) => {
       handlebars({
         partialDirectory: resolve(__dirname, 'src/partials'),
         context: {
-          baseUrl: (process.env.BASE_URL || '/').replace(/\/?$/, '/'),
-          simpleMode: process.env.SIMPLE_MODE === 'true',
-          brandName: process.env.VITE_BRAND_NAME || '',
-          brandLogo: process.env.VITE_BRAND_LOGO || '',
-          footerText: process.env.VITE_FOOTER_TEXT || '',
+          baseUrl: (env.BASE_URL || '/').replace(/\/?$/, '/'),
+          simpleMode: env.SIMPLE_MODE === 'true',
+          brandName: env.VITE_BRAND_NAME || '',
+          brandLogo: env.VITE_BRAND_LOGO || '',
+          footerText: env.VITE_FOOTER_TEXT || '',
         },
       }),
       languageRouterPlugin(),
