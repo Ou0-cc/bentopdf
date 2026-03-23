@@ -173,5 +173,12 @@
         "url": "https://www.bentopdf.com/404"
       }
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (typeof plausible !== 'undefined') {
+          plausible('404', { props: { path: document.location.pathname } });
+        }
+      });
+    </script>
   </body>
 </html>

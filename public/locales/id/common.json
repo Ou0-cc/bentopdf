@@ -300,7 +300,12 @@
   "contact": {
     "title": "Hubungi Kami",
     "subtitle": "Kami senang mendengar dari Anda. Apakah Anda memiliki pertanyaan, umpan balik, atau permintaan fitur, jangan ragu untuk menghubungi kami.",
-    "email": "Anda dapat menghubungi kami secara langsung melalui email di:"
+    "email": "Anda dapat menghubungi kami secara langsung melalui email di:",
+    "noteLabel": "Catatan:",
+    "noteTeam": "Alamat email di atas adalah untuk tim pengembang inti BentoPDF. Hubungi mereka untuk dukungan perangkat lunak umum dan pertanyaan.",
+    "noteAdminPre": "Jika Anda perlu menghubungi administrator situs web khusus ini atau melaporkan masalah hosting, silakan gunakan ",
+    "contactPage": "Halaman Kontak",
+    "noteAdminPost": " kami."
   },
   "licensing": {
     "title": "Lisensi untuk",

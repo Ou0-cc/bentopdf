@@ -309,7 +309,12 @@
   "contact": {
     "title": "Kontakt os",
     "subtitle": "Vi vil gerne høre fra dig — spørgsmål, feedback eller ønsker er velkomne.",
-    "email": "Du kan kontakte os direkte på:"
+    "email": "Du kan kontakte os direkte på:",
+    "noteLabel": "Bemærk:",
+    "noteTeam": "E-mailadressen ovenfor er til kernen af BentoPDFs udviklingsteam. Kontakt dem for generel softwaresupport og forespørgsler.",
+    "noteAdminPre": "Hvis du har brug for at kontakte administratoren for dette specifikke websted eller rapportere et hostingproblem, skal du bruge vores ",
+    "contactPage": "Kontaktside",
+    "noteAdminPost": "."
   },
   "licensing": {
     "title": "licensing til",

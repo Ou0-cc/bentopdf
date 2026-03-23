@@ -299,7 +299,12 @@
   "contact": {
     "title": "Kontakt aufnehmen",
     "subtitle": "Wir freuen uns, von dir zu hören. Ob du eine Frage, Feedback oder einen Funktionswunsch hast, schreib uns gerne!",
-    "email": "Du kannst uns per E-Mail unter dieser Adresse erreichen:"
+    "email": "Du kannst uns per E-Mail unter dieser Adresse erreichen:",
+    "noteLabel": "Hinweis:",
+    "noteTeam": "Die obige E-Mail-Adresse gehört zum Kernentwicklerteam von BentoPDF. Kontaktiere sie für allgemeinen Software-Support und Anfragen.",
+    "noteAdminPre": "Wenn du den Administrator dieser speziellen Website erreichen oder ein Hosting-Problem melden möchtest, nutze bitte unsere ",
+    "contactPage": "Kontakt-Seite",
+    "noteAdminPost": "."
   },
   "licensing": {
     "title": "Lizenzierung für",

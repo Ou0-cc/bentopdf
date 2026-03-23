@@ -300,7 +300,12 @@
   "contact": {
     "title": "Contattaci",
     "subtitle": "Ci farebbe piacere sentirti. Che tu abbia una domanda, un feedback o una richiesta di funzionalità, non esitare a contattarci.",
-    "email": "Puoi contattarci direttamente via email a:"
+    "email": "Puoi contattarci direttamente via email a:",
+    "noteLabel": "Nota:",
+    "noteTeam": "L'indirizzo e-mail sopra indicato è del team di sviluppo principale di BentoPDF. Contattali per supporto tecnico generale sul software e richieste.",
+    "noteAdminPre": "Se hai bisogno di contattare l'amministratore di questo sito web specifico o segnalare un problema di hosting, ti preghiamo di utilizzare la nostra ",
+    "contactPage": "Pagina di Contatto",
+    "noteAdminPost": "."
   },
   "licensing": {
     "title": "Licenze per",

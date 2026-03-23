@@ -309,7 +309,12 @@
   "contact": {
     "title": "Neem contact op",
     "subtitle": "We horen graag van je. Of je nu een vraag, feedback of een verzoek voor een functie hebt, aarzel dan niet om contact met ons op te nemen.",
-    "email": "Je kunt ons rechtstreeks bereiken via e-mail op:"
+    "email": "Je kunt ons rechtstreeks bereiken via e-mail op:",
+    "noteLabel": "Opmerking:",
+    "noteTeam": "Het bovenstaande e-mailadres is van het kernontwikkelingsteam van BentoPDF. Neem contact met hen op voor algemene softwareondersteuning en vragen.",
+    "noteAdminPre": "Als je de beheerder van deze specifieke website wilt bereiken of een hostingprobleem wilt melden, gebruik dan onze ",
+    "contactPage": "Contactpagina",
+    "noteAdminPost": "."
   },
   "licensing": {
     "title": "Licentie voor",

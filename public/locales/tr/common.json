@@ -300,7 +300,12 @@
   "contact": {
     "title": "İletişime Geçin",
     "subtitle": "Sizden haber almak isteriz. Bir sorunuz, geri bildiriminiz veya bir özellik isteğiniz varsa, lütfen bize ulaşmaktan çekinmeyin.",
-    "email": "Bize doğrudan şu e-posta adresinden ulaşabilirsiniz:"
+    "email": "Bize doğrudan şu e-posta adresinden ulaşabilirsiniz:",
+    "noteLabel": "Not:",
+    "noteTeam": "Yukarıdaki e-posta adresi çekirdek BentoPDF geliştirme ekibine aittir. Genel yazılım desteği ve sorularınız için onlarla iletişime geçin.",
+    "noteAdminPre": "Bu özel web sitesinin yöneticisine ulaşmanız veya bir barındırma sorunu bildirmeniz gerekiyorsa, lütfen ",
+    "contactPage": "İletişim Sayfamızı",
+    "noteAdminPost": " kullanın."
   },
   "licensing": {
     "title": "Lisanslama",

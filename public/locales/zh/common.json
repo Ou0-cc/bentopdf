@@ -300,7 +300,12 @@
   "contact": {
     "title": "联系我们",
     "subtitle": "我们很乐意听到您的声音。无论您有问题、反馈还是功能请求，请随时联系我们。",
-    "email": "您可以直接通过电子邮件联系我们："
+    "email": "您可以直接通过电子邮件联系我们：",
+    "noteLabel": "注意：",
+    "noteTeam": "以上的电子邮件地址属于BentoPDF核心开发团队。请联系他们以获取常规软件支持和咨询。",
+    "noteAdminPre": "如果您需要联系此特定网站的管理员或报告托管问题，请使用我们的 ",
+    "contactPage": "联系页面",
+    "noteAdminPost": "。"
   },
   "licensing": {
     "title": "许可适用",
